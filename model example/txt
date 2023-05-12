@@ -1,0 +1,59 @@
+ <div class="row" id="row-height">
+
+		         <div class="col-md-3 my-1" id="open" style="padding-left: 15px;">
+					<p class="column-heading" style="color: red;">To Do</p>
+          <div class="row ml-2 mt-3" *ngFor="let open of openList">
+
+          <!-- ////////////////////////// -->
+          <div class="container">
+
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+              <div id="open-details-card" class="card mb-2">
+                <img src="assets/img/rectangleRed.png" width="20" height="20" style="position:relative; left: 88%"/>
+             <!-- <img src="assets/img/Rectangle9.png" width="20" height="20" style="position:relative; left: 88%"/> -->
+                             <div class="row ml-2" style="font-family: Asap;font-weight: BOLD;text-align: left;letter-spacing: 0px;color: #111111;opacity: 1;font-size: 14px;">
+                              {{open.taskName}}  </div>
+                <div class="row ml-2 mt-2">
+              <img src="assets/img/Layer61.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedOnStr}}</div>
+              <div class="row ml-2 mt-2"><img src="assets/img/Layer60.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedAt}} hrs</div>
+
+                         </div>
+            </button>
+
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <div id="open-details-card" class="card mb-2">
+                      <img src="assets/img/rectangleRed.png" width="20" height="20" style="position:relative; left: 88%"/>
+                   <!-- <img src="assets/img/Rectangle9.png" width="20" height="20" style="position:relative; left: 88%"/> -->
+                                   <div class="row ml-2" style="font-family: Asap;font-weight: BOLD;text-align: left;letter-spacing: 0px;color: #111111;opacity: 1;font-size: 14px;">
+                                    {{open.taskName}}  </div>
+                      <div class="row ml-2 mt-2">
+                    <img src="assets/img/Layer61.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedOnStr}}</div>
+                    <div class="row ml-2 mt-2"><img src="assets/img/Layer60.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedAt}} hrs</div>
+
+                               </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+					  </div>
+				 </div>

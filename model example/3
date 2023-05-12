@@ -1,0 +1,61 @@
+<div class="col-md-3 my-1" id="open" style="padding-left: 15px;">
+  <p class="column-heading" style="color: red;">To Do</p>
+      <div class="row ml-2 mt-3" *ngFor="let open of openList">
+         <div id="open-details-card" class="card mb-2">
+          <img src="assets/img/rectangleRed.png" width="20" height="20" style="position:relative; left: 88%"/>
+       <!-- <img src="assets/img/Rectangle9.png" width="20" height="20" style="position:relative; left: 88%"/> -->
+                       <div class="row ml-2" style="font-family: Asap;font-weight: BOLD;text-align: left;letter-spacing: 0px;color: #111111;opacity: 1;font-size: 14px;">{{open.taskName}}</div>
+          <div class="row ml-2 mt-2">
+        <img src="assets/img/Layer61.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedOnStr}}</div>
+        <div class="row ml-2 mt-2"><img src="assets/img/Layer60.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{open.updatedAt}} hrs</div>
+
+                   </div>
+    </div>
+ </div>
+
+ <div class="col-md-3 my-1" id="progress" style="padding-left: 10px;">
+ <p class="column-heading" style="color: yellow;">In Progress</p>
+      <div class="row ml-2 mt-3" *ngFor="let inProgress of inProgressList">
+         <div id="inProgress-details-card" class="card mb-2">
+          <img src="assets/img/rectangleYellow.png" width="20" height="20" style="position:relative; left: 88%"/>
+       <!-- <img src="assets/img/rectangleGrey.png" width="20" height="20" style="position:relative; left: 88%"/> -->
+                       <div class="row ml-2" style="font-family: Asap;font-weight: BOLD;text-align: left;letter-spacing: 0px;color: #111111;opacity: 1;font-size: 14px;">{{inProgress.taskName}}</div>
+         <div class="row ml-2 mt-2">
+        <img src="assets/img/Layer61.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{inProgress.updatedOnStr}}</div>
+        <div class="row ml-2 mt-2"><img src="assets/img/Layer60.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{inProgress.updatedAt}} hrs</div>
+                   </div>
+    </div>
+ </div>
+
+ <div class="col-md-3 my-1" id="closed" style="padding-left: 10px;">
+ <p class="column-heading" style="color: green;">Closed</p>
+      <div class="row ml-2 mt-3" *ngFor="let closed of closedList">
+         <div id="closed-details-card" class="card mb-2">
+          <img src="assets/img/Rectangle9.png" width="20" height="20" style="position:relative; left: 88%"/>
+       <!-- <img src="assets/img/rectangleRed.png" width="20" height="20" style="position:relative; left: 88%"/> -->
+       <button type="button" class="btn " data-toggle="modal" data-target="#myModal">
+
+
+                       <div class="row ml-2" style="font-family: Asap;font-weight: BOLD;text-align: left;letter-spacing: 0px;color: #111111;opacity: 1;font-size: 14px;">{{closed.taskName}}</div>
+          </button>
+                       <div class="row ml-2 mt-2">
+        <img src="assets/img/Layer61.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{closed.updatedOnStr}}</div>
+        <div class="row ml-2 mt-2"><img src="assets/img/Layer60.png" width="22" height="22" style="font-family: Asap;font-weight: 400;font-size: 14px;color: #666666;margin-right: 7px;"/>{{closed.updatedAt}} hrs</div>
+                   </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">
+
+            </h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>

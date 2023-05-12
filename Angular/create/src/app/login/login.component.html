@@ -1,0 +1,24 @@
+<!-- userName: <input type="text" name="userName" [(ngModel)]="userName">
+password: <input type="password" name="password" [(ngModel)]="password">
+<button (click)="handlelogin()">submit</button>
+
+<hr>
+
+<p *ngIf="invaild">invalid</p> -->
+
+
+
+<div class="container">
+  <table class="table table-success">
+  <tr>
+    <th>ID:</th>
+    <th>Name:</th>
+    <th>place:</th>
+  </tr>
+  <tr *ngFor='let item of Data'>
+    <th>{{item.Id}}</th>
+    <th>{{item.Name}}</th>
+    <th>{{item.Place}}</th>
+  </tr>
+  </table>
+</div>
